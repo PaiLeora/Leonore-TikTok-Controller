@@ -1,0 +1,40 @@
+workflows:
+  android-release:
+    name: Leonore TikTok Controller - Android Release
+    max_build_duration: 30
+    environment:
+      groups:
+        - keystore_credentials # optional, only needed if you add a real signing config later
+      vars:
+        PACKAGE_NAME: "com.leonoretech.tiktokcontroller"
+      java: 17
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+
+      - name: Generate Gradle wrapper (if wrapper jar missing)
+        script: |
+          cd "$CM_BUILD_DIR"
+          if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
+            echo "gradle-wrapper.jar not present, bootstrapping with system gradle"
+            gradle wrapper --gradle-version 8.7
+          fi
+          chmod +x ./gradlew
+
+      - name: Build release APK
+        script: |
+          cd "$CM_BUILD_DIR"
+          ./gradlew assembleRelease --stacktrace --no-daemon
+
+    artifacts:
+      - app/build/outputs/apk/release/*.apk
+      - app/build/outputs/**/mapping.txt
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
