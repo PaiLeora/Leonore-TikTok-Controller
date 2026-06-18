@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyber_black">#0A0E14</color>
+    <color name="cyber_black_dark">#05070A</color>
+    <color name="cyber_panel">#10151D</color>
+    <color name="neon_cyan">#00F5FF</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="neon_purple">#B026FF</color>
+    <color name="neon_pink">#FF2A6D</color>
+    <color name="text_primary">#E6F7FF</color>
+    <color name="text_secondary">#7FA8B8</color>
+    <color name="status_on">#39FF14</color>
+    <color name="status_off">#FF2A6D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
