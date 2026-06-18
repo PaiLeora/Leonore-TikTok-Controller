@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Leonore TikTok Controller</string>
+    <string name="leonore_tech_team">Leonore Tech Team</string>
+
+    <string name="accessibility_service_description">Mengizinkan Leonore TikTok Controller untuk mendeteksi tampilan layar dan melakukan swipe / tap otomatis di TikTok, Instagram Reels, dan YouTube Shorts.</string>
+
+    <string name="status_active">AKTIF</string>
+    <string name="status_inactive">NONAKTIF</string>
+
+    <string name="btn_start_service">START SERVICE</string>
+    <string name="btn_stop_service">STOP SERVICE</string>
+    <string name="btn_enable_accessibility">Aktifkan Accessibility Service</string>
+    <string name="btn_start_voice">Aktifkan Voice Control</string>
+    <string name="btn_stop_voice">Matikan Voice Control</string>
+
+    <string name="label_accessibility_status">Accessibility Service</string>
+    <string name="label_mic_status">Microphone / Voice Control</string>
+    <string name="label_autoscroll">Auto Scroll Mode</string>
+    <string name="label_interval">Interval (detik)</string>
+    <string name="label_voice_log">Voice Command Log</string>
+    <string name="label_gesture">Gesture Control (Basic)</string>
+
+    <string name="swipe_up_action">Swipe Up</string>
+    <string name="swipe_down_action">Swipe Down</string>
+    <string name="like_action">Like</string>
+    <string name="pause_action">Pause</string>
+</resources>
